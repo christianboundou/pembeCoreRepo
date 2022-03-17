@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="fr">
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>{% block title %}fonoCore | {% endblock %}</title>
+        <link rel="stylesheet"
+              href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css.map">
+        <link rel="stylesheet" href="{% static 'css/base.css' %}">
+        {% block stylesheets %}{% endblock %}
+    </head>
+
+    <body>
+        <div>
+            <div>
+                {% include 'layouts/_nav.html' %}
+            </div>
+
+            <div class="wrapper">
+                     <h2>...ba betaka yango likofi te</h2>
+                    {% block content %}
+                    {% endblock content %}
+            </div>
+        </div>
+
+        <footer id="footer">
+            <div>{% include 'layouts/_footer.html' %}</div>
+        </footer>
+    {% block javascripts %}{% endblock %}
+    </body>
+</html>

@@ -1,0 +1,83 @@
+/* Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
+
+/* Reset */
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+/* Helpers */
+.wrapper {
+    width: 1440px;
+    max-width: 90%;
+    margin: 0 auto;
+}
+
+.text-center {
+    text-align: center;
+}
+
+/* Main Styles */
+body {
+    font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+    background-color: #f2f2f2;
+}
+
+.navbar {
+    background-color: #000;
+    border-top: 4px solid #1ce;
+    padding: 1em 0;
+}
+
+.navbar .navbar-brand {
+    font-size: 2.2em;
+    color: #f2f2f2;
+    text-decoration: none;
+}
+
+
+
+.navbar .navbar-right {
+    text-decoration: none;
+    float: right;
+}
+
+.navbar .navbar-right li {
+    text-decoration: none;
+    display: inline-block;
+    list-style: none;
+    margin-top: 1em;
+    margin-right: 0.3em;
+}
+
+.navbar .navbar-right li:last-child {
+    margin-right: 0;
+}
+
+.navbar .navbar-right li a {
+    color: #f2f2f2;
+    text-decoration: none;
+}
+
+.navbar .navbar-right li a:hover {
+    color: #1ce;
+}
+
+.navbar-brand  li a:hover {
+    color: #1ce;
+}
+
+.footer {
+    margin-top: 12em;
+    color: rgba(0,0,0,0.6);
+}
+
+.footer:before {
+    content: " ";
+    display: block;
+    height: 1px;
+    background-color: #1ce;
+    width: 30%;
+    margin: 0.5em auto;
+}

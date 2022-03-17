@@ -1,0 +1,25 @@
+{% extends 'layouts/base.html' %}
+{% block title %}Blog | fonoCore{% endblock %}
+
+{% load static %}
+
+{% block stylesheets %}
+<link rel="stylesheet" href="{% static 'blog/css/blog.css' %}">
+{% endblock %}
+
+    {% block content %}
+        <h2>My Blog ({{ posts|length }} Post)</h2>
+        {% for post in posts %}
+            <article class="post">
+                <h2>#{{ post.id }} - <a href="{% url 'show' pk=post.pk %}">{{ post.title|lower }}</a></h2>
+                <p>{{ post.text|truncatewords:25 }}</p>
+                <p>...<a href="{% url 'show' pk=post.pk %}"> et la suite ici</a></p>
+                <time class="date">Date de publication : {{ post.published_date }}</time>
+            </article>
+            {% if not forloop.last %}
+                <hr>
+            {% endif %}
+        {% empty %}
+            <p>Désolé, il n'y a pas de message.</p>
+        {% endfor %}
+    {% endblock content %}
